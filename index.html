@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INFUDERM | Coming Soon</title>
+  <meta name="description" content="INFUDERM is coming soon to Reston, Virginia in June 2026." />
+  <style>
+    :root {
+      --black: #090806;
+      --card: #1c1711;
+      --gold: #c49a45;
+      --gold-light: #f3d987;
+      --cream: #f8f1e7;
+      --muted: #cbbba7;
+      --border: rgba(196,154,69,.38);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(196,154,69,.22), transparent 32%),
+        radial-gradient(circle at 20% 80%, rgba(196,154,69,.12), transparent 28%),
+        linear-gradient(135deg, #050403, #0d0b08 40%, #17120d);
+      color: var(--cream);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(9,8,6,.88), rgba(9,8,6,.93)),
+        url("https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1800&q=80") center/cover;
+      opacity: .5;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 18px;
+      border: 1px solid rgba(196,154,69,.18);
+      border-radius: 34px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .locked-card {
+      width: min(760px, 100%);
+      text-align: center;
+      background: linear-gradient(180deg, rgba(35,29,21,.96), rgba(16,13,9,.96));
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: clamp(34px, 6vw, 62px);
+      box-shadow: 0 34px 110px rgba(0,0,0,.62);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .locked-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: radial-gradient(circle at 50% 0%, rgba(243,217,135,.2), transparent 38%);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      width: min(280px, 70%);
+      margin: 0 auto 28px;
+      filter: drop-shadow(0 12px 28px rgba(0,0,0,.45));
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: .95rem;
+      font-weight: 900;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.7rem, 8vw, 5.4rem);
+      line-height: .95;
+      margin-bottom: 18px;
+      color: var(--cream);
+    }
+
+    .launch {
+      display: inline-block;
+      margin: 10px 0 26px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(243,217,135,.48);
+      color: var(--gold-light);
+      background: rgba(196,154,69,.1);
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .86rem;
+    }
+
+    .message {
+      max-width: 610px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2.3vw, 1.18rem);
+      line-height: 1.75;
+    }
+
+    .address {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(196,154,69,.25);
+      color: var(--cream);
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+      margin-top: 22px;
+      color: var(--gold-light);
+      font-weight: 800;
+      font-size: .96rem;
+    }
+
+    .contact span {
+      border: 1px solid rgba(196,154,69,.28);
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: rgba(0,0,0,.18);
+    }
+
+    .note {
+      margin-top: 24px;
+      color: rgba(248,241,231,.55);
+      font-size: .86rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+
+      body::after {
+        inset: 10px;
+        border-radius: 24px;
+      }
+
+      .locked-card {
+        border-radius: 26px;
+      }
+
+      .contact {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="locked-card" aria-label="INFUDERM Coming Soon">
+    <div class="content">
+      <img class="logo" src="logo.png" alt="INFUDERM Clinic Logo" />
+      <div class="eyebrow">Coming Soon</div>
+      <h1>June 2026</h1>
+      <div class="launch">INFUDERM Clinic</div>
+      <p class="message">
+        INFUDERM blends advanced medical aesthetics, wellness, skin treatment, and IV therapy with a refined, safety-first experience in Reston, Virginia.
+      </p>
+      <div class="address">
+        11862 Sunrise Valley Drive, Unit 101<br />
+        Reston, VA 20191
+      </div>
+      <div class="contact">
+        <span>Info@InfudermVA.com</span>
+        <span>1-800-INFU-DERM</span>
+      </div>
+      <p class="note">Full website access will be available once the clinic launch is finalized.</p>
+    </div>
+  </main>
+</body>
+</html>
